@@ -1,0 +1,22 @@
+
+.hero-section {
+  background-image: url('../../../../src/assets/img/fondo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 576px) {
+  .hero-section {
+    height: 40vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
