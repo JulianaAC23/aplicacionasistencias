@@ -5,11 +5,11 @@ export function Footer() {
     <footer className="bg-dark text-white mt-auto pt-4 pb-3">
       <div className="container">
         <div className="row" style={{"justifyContent": "space-between"}}>
-          {/* Información de la Biblioteca */}
+          {/* Información de la Institución */}
           <div className="col-md-4 mb-3">
-            <h5>Biblioteca Educativa</h5>
+            <h5>Institución Educativa Educativa</h5>
             <p>
-              Promoviendo la lectura, el aprendizaje y el acceso al conocimiento
+              Promoviendo el aprendizaje y el acceso al conocimiento
               para todos los estudiantes.
             </p>
           </div>

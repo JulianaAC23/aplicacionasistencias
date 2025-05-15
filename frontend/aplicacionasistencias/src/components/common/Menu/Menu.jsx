@@ -4,7 +4,7 @@ export function Menu() {
   return (
     <div>
       {/*<!-- Navbar -->*/}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
         <div className="container">
           <Link className="navbar-brand" to="/home" style={{ margin: "0px" }}>
             <img
@@ -30,13 +30,23 @@ export function Menu() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="">
+                <Link className="nav-link" to="/asistencias">
                   Asistencias
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="">
+                <Link className="nav-link" to="/contacto">
                   Contacto
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/nosotros">
+                  Nosotros
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="">
+                  🔍
                 </Link>
               </li>
             </ul>
