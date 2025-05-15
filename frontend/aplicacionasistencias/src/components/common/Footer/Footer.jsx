@@ -31,7 +31,7 @@ export function Footer() {
         <hr className="border-light" />
 
         <div className="text-center">
-          <p className="mb-0">&copy; {new Date().getFullYear()} Biblioteca Educativa. Todos los derechos reservados.</p>
+          <p className="mb-0">&copy; {new Date().getFullYear()}  Educativa. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
