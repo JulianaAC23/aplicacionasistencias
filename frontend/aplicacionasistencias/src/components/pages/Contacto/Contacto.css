@@ -1,0 +1,117 @@
+.contact-container {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h2 {
+  color: #e91e63; /* color rosado */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.name-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.name-group input {
+  flex: 1;
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  appearance: none; /* Quita flecha nativa en select */
+  background: #fff url('data:image/svg+xml;utf8,<svg fill="%23999" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-size: 12px;
+}
+
+.policy-text {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 25px;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.btn-submit {
+  border: 1px solid #e91e63;
+  background: none;
+  color: #e91e63;
+  padding: 12px 25px;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #e91e63;
+  color: white;
+}
+
+.contact-info {
+  width: 300px;
+  border: 1px solid #eee;
+  padding: 15px 25px;
+  border-radius: 4px;
+}
+
+.contact-info h3 {
+  background: #e91e63;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.sede h4 {
+  color: #e91e63;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.sede p {
+  margin: 0 0 15px 0;
+  color: #444;
+  font-size: 14px;
+}
