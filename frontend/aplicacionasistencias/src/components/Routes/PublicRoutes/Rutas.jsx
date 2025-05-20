@@ -1,14 +1,11 @@
-import { Routes,Route } from "react-router-dom"
+import { Routes,Route, Navigate } from "react-router-dom"
 import { Home } from "../../pages/Home/Home"
 import { Menu } from "../../common/Menu/Menu"
 import { Login } from "../../pages/Login/Login"
+import Register from "../../pages/Login/Register";
 import Contacto from "../../pages/Contacto/Contacto"
 import Nosotros from "../../pages/Nosotros/Nosotros"  
 import AdminRoutes from "../PrivateRoutes/AdminRoutes"
-
-
-
-
 
 
 
@@ -21,8 +18,10 @@ export default function Rutas() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
+        <Route path="/registro" element={<Register />} />
         <Route path="/contacto" element={<Contacto/>}></Route>
         <Route path="/nosotros" element={<Nosotros/>}></Route>
+        
 
         {/* Rutas Privadas */}
         <Route path="/admin/*" element={<AdminRoutes/>}></Route>

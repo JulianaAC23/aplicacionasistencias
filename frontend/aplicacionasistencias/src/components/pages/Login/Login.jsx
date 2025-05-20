@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // Asegúrate de importar Link
+import axios from "axios";
 
 export function Login() {
   const [usuario, setUsuario] = useState("");
@@ -10,10 +11,9 @@ export function Login() {
   const manejarEnvio = (e) => {
     e.preventDefault();
 
-    // Validación básica
     if (usuario === "admin" && clave === "1234") {
       setError("");
-      navigate("/home"); // Redirige al home
+      navigate("/home");
     } else {
       setError("Usuario o contraseña incorrectos");
     }
@@ -47,10 +47,16 @@ export function Login() {
 
         {error && <div className="alert alert-danger">{error}</div>}
 
-        <button type="submit" className="btn btn-primary w-100">
-          Entrar
-        </button>
+        <div className="d-flex justify-content-between">
+          <button type="submit" className="btn btn-primary">
+            Entrar
+          </button>
+          <Link to="/registro" className="btn btn-outline-secondary">
+            Registrarse
+          </Link>
+        </div>
       </form>
     </div>
   );
 }
+
