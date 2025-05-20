@@ -8,6 +8,10 @@ import AdminRoutes from "../PrivateRoutes/AdminRoutes"
 
 
 
+
+
+
+
 export default function Rutas() {
   return (
     <>
@@ -21,6 +25,7 @@ export default function Rutas() {
         <Route path="/nosotros" element={<Nosotros/>}></Route>
 
         {/* Rutas Privadas */}
+        <Route path="/admin/*" element={<AdminRoutes/>}></Route>
         <Route path="/admin/*" element={<AdminRoutes/>}></Route>
       </Routes>
     </>

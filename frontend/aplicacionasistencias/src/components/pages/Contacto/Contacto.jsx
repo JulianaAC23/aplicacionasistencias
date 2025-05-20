@@ -1,8 +1,10 @@
 import React from 'react';
 import './Contacto.css';
+import { Footer } from '../../common/Footer/Footer';
 
 export default function Contacto() {
   return (
+    <>
     <div className="contact-container">
       <div className="contact-form">
         <h2>Contáctanos</h2>
@@ -18,9 +20,11 @@ export default function Contacto() {
 
           <select required>
             <option value="" disabled selected>Seleccione sede</option>
-            <option value="cali">Cali</option>
-            <option value="pereira">Nueva sede Pereira</option>
             <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+            <option value="bogota">Bogotá</option>
+            <option value="pereira">Nueva sede Pereira</option>
+            
             {/* más opciones */}
           </select>
 
@@ -48,16 +52,29 @@ export default function Contacto() {
       <div className="contact-info">
         <h3>Nuestras sedes</h3>
         <div className="sede">
+          <h4>Medellín</h4>
+          <p>Calle 0 #00-00, Pabellón del Agua</p>
+        </div>
+        <div className="sede">
           <h4>Cali</h4>
-          <p>Calle 8 #37-38, barrio Eucarístico</p>
+          <p>Calle 1 #11-11</p>
         </div>
         <div className="sede">
           <h4>Nueva sede Pereira</h4>
-          <p>Carrera 19 #12-70 Megacentro, pinares entrada 4</p>
+          <p>Carrera 2 #22-22</p>
+        </div>
+        <div className="sede">
+          <h4>Bogotá</h4>
+          <p>Carrera 33 #33-33</p>
         </div>
         {/* Más sedes con iconos similares */}
       </div>
     </div>
+    <br /><br />
+    <Footer />
+    </>
   );
 }
+
+
 

@@ -30,11 +30,6 @@ export function Menu() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/asistencias">
-                  Asistencias
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link" to="/contacto">
                   Contacto
                 </Link>
