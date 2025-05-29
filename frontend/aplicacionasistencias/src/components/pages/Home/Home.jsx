@@ -9,7 +9,7 @@ export function Home() {
       <header className="hero-section">
         <div className="container">
           <h1 className="display-4 fw-bold">
-            Bienvenidos a Nuestra Institución
+            Bienvenidos a Nuestra App de Gestión Educativa
           </h1>
           <p className="lead">
             Formando estudiantes con valores, conocimiento y futuro.
@@ -53,7 +53,7 @@ export function Home() {
           <p className="mb-4">
             Ingresa al sistema para registrar la asistencia de tus estudiantes.
           </p>
-          <Link to="">Ir al registro de asistencia</Link>
+          
         </div>
       </section>
 

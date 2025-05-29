@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 export function Footer() {
   return (
     <footer className="bg-dark text-white mt-auto pt-4 pb-3">
@@ -18,11 +19,11 @@ export function Footer() {
             <h4>Líneas de Atención</h4>
             <p>
               Medellín: 0000000000
-              <hr />
+             <br /><br /><br />
               Pereira: 1111111111
-              <hr />
+             <br /><br /><br />
               Cali: 2222222222
-              <hr />
+              <br /><br /><br />
               Bogotá: 3333333333
             </p>
           </div>

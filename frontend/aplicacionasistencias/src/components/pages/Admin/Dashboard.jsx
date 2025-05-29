@@ -1,5 +1,8 @@
-// src/pages/Admin/Dashboard.jsx
+import { useAuth } from "../../../context/AuthProvider";
+
+
 export function Dashboard() {
+  let { user } = useAuth();
   return (
     <div className="wrapper">
       {/* Navbar */}
@@ -40,7 +43,7 @@ export function Dashboard() {
       <div className="content-wrapper p-4">
         <div className="content-header">
           <div className="container-fluid">
-            <h1 className="m-0">Bienvenido al Dashboard</h1>
+            <h1 className="m-0">Bienvenido al Dashboard {user.username} </h1>
           </div>
         </div>
 
@@ -51,8 +54,8 @@ export function Dashboard() {
               <div className="col-lg-4 col-6">
                 <div className="small-box bg-info">
                   <div className="inner">
-                    <h3>120</h3>
-                    <p>Estudiantes Registrados</p>
+                    <h3>Registros por Estado</h3>
+                    <img src="../../../assets/img/Figure_1.png" alt="" />
                   </div>
                   <div className="icon">
                     <i className="fas fa-user-graduate"></i>
@@ -63,8 +66,8 @@ export function Dashboard() {
               <div className="col-lg-4 col-6">
                 <div className="small-box bg-success">
                   <div className="inner">
-                    <h3>85%</h3>
-                    <p>Asistencias del Día</p>
+                    <h3>Medio de Transporte</h3>
+                    <img src="../../../assets/img/Figure_2.png" alt="" />
                   </div>
                   <div className="icon">
                     <i className="fas fa-check-circle"></i>
@@ -75,8 +78,8 @@ export function Dashboard() {
               <div className="col-lg-4 col-6">
                 <div className="small-box bg-warning">
                   <div className="inner">
-                    <h3>3</h3>
-                    <p>Medios de Transporte Usados</p>
+                    <h3>Estado / medio de transporte</h3>
+                    <img src="../../../assets/img/Figure_3.png" alt="" />
                   </div>
                   <div className="icon">
                     <i className="fas fa-bus-alt"></i>

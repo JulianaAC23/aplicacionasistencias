@@ -1,13 +1,17 @@
-import React from "react";
+import { useAuth } from "../../../context/AuthProvider";
 
 export default function Asistencias() {
+   let { user } = useAuth();
   return (
     <div className="container py-5">
       <div className="row justify-content-center">
         <div className="col-md-8">
           <div className="card shadow rounded">
             <div className="card-body">
-              <h2 className="card-title text-center mb-4">Registro de Asistencia</h2>
+              <h3 className="card-title text-center mb-4 fw-bold">Registro de Asistencia</h3>
+              <br />
+              <h4 className="card-title">Profesor {user.username} </h4>
+              <br /><br />
               <form>
                 <div className="row mb-3">
                   <div className="col-md-6">
@@ -19,6 +23,7 @@ export default function Asistencias() {
                     <input type="text" className="form-control" id="apellido" placeholder="Ingrese el apellido" />
                   </div>
                 </div>
+                <br /><br />
 
                 <div className="row mb-3">
                   <div className="col-md-6">
@@ -30,12 +35,27 @@ export default function Asistencias() {
                     <input type="text" className="form-control" id="id" placeholder="Número de identificación" />
                   </div>
                 </div>
+                <br /><br />
 
-                 <div className="col-md-6">
+                <div className="row mb-3">
+                  <div className="col-md-6">
                     <label htmlFor="fecha" className="form-label">Fecha</label>
                     <input type="date" className="form-control" id="fecha" placeholder="Número de identificación" />
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="periodo" className="form-label">Periodo Academico</label>
+                    <select className="form-select" id="periodo" name="periodo">
+                      <option value="">Seleccione un periodo:</option>
+                      <option value="2025-1">1</option>
+                      <option value="2025-2">2</option>
+                      <option value="2025-3">3</option>
+                      <option value="2025-4">4</option>
+                    </select>
+                  </div>
                 </div>
-
+                <br /><br />
+                <hr />
+                
                 <div className="mb-4">
                   <label className="form-label d-block">Asistencia</label>
                   <div className="form-check form-check-inline">
@@ -51,7 +71,8 @@ export default function Asistencias() {
                     <label className="form-check-label" htmlFor="justificado">Justificado</label>
                   </div>
                 </div>
-                <hr />
+                <br /><br />
+                 <hr />
 
                 <div className="mb-4">
                   <label className="form-label d-block">Medio transporte</label>
@@ -75,9 +96,15 @@ export default function Asistencias() {
                     <input className="form-check-input" type="radio" name="transporte" id="bicicleta" value="bicicleta" />
                     <label className="form-check-label" htmlFor="bicicleta">Bicicleta</label>
                   </div>
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="radio" name="transporte" id="carro" value="carro" />
+                    <label className="form-check-label" htmlFor="carro">Carro</label>
+                  </div>
                 </div>
+                <br /><br />
                 <hr />
-                  <div className="mb-4">
+
+                <div className="mb-4">
                   <label className="form-label d-block">Estrato</label>
                   <div className="form-check form-check-inline">
                     <input className="form-check-input" type="radio" name="estrato" id="1" value="1" defaultChecked />
@@ -95,19 +122,20 @@ export default function Asistencias() {
                     <input className="form-check-input" type="radio" name="estrato" id="4" value="4" />
                     <label className="form-check-label" htmlFor="4">4</label>
                   </div>
-                   <div className="form-check form-check-inline">
+                  <div className="form-check form-check-inline">
                     <input className="form-check-input" type="radio" name="estrato" id="5" value="5" />
                     <label className="form-check-label" htmlFor="5">5</label>
                   </div>
-                   <div className="form-check form-check-inline">
+                  <div className="form-check form-check-inline">
                     <input className="form-check-input" type="radio" name="estrato" id="6" value="6" />
                     <label className="form-check-label" htmlFor="6">6</label>
                   </div>
                 </div>
-                
+                <br /><br />
+                <hr />
 
                 <div className="d-grid">
-                  <button type="submit" className="btn btn-primary btn-lg">Registrar Asistencia</button>
+                  <button type="submit" className="btn btn-danger btn-lg">Registrar Asistencia</button>
                 </div>
               </form>
             </div>

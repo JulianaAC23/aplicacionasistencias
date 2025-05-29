@@ -5,103 +5,70 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Register() {
-
-    const [nombre, setNombre] = useState("");
-    const [correo, setCorreo] = useState("");
-    const [usuario, setUsuario] = useState("");
-    const [clave, setClave] = useState("");
-    const [error, setError] = useState("");
-    const [exito, setExito] = useState("");
-
-    const navigate = useNavigate();
-
-    const manejarRegistro = async (e) => {
-        e.preventDefault();
-
-        if (!nombre || !correo || !usuario || !clave) {
-            setError("Todos los campos son obligatorios");
-            return;
-        }
-
-        try {
-            // Simula una solicitud POST (ajusta la URL a tu backend real)
-            // await axios.post("http://localhost:3000/api/registro", {
-            //   nombre,
-            //   correo,
-            //   usuario,
-            //   clave,
-            // });
-
-            setExito("Usuario registrado correctamente");
-            setError("");
-
-            // Redirige al login o a home si quieres
-            setTimeout(() => {
-                navigate("/login");
-            }, 1500);
-        } catch (err) {
-            setError("Error al registrar usuario");
-            setExito("");
-        }
-    };
-
     return (
         <>
-            <div className="container mt-3">
-                <h2 className="mb-4">Registro de Usuario</h2>
-                <form onSubmit={manejarRegistro} className="card p-4 shadow">
-                    <div className="mb-3">
-                        <label className="form-label">Nombre completo</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            value={nombre}
-                            onChange={(e) => setNombre(e.target.value)}
-                            required
-                        />
+            <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Crear una Cuenta!</h1>
+                            </div>
+                            <form class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="Primer Nombre"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Apellido"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Correo Electrónico"/>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Contraseña"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Repetir Contraseña"/>
+                                    </div>
+                                </div>
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                    Registrar Cuenta
+                                </a>
+                                <hr/>
+                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Registrarse con Google
+                                </a>
+                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Registrarse con Facebook
+                                </a>
+                            </form>
+                            <hr/>
+                            <div class="text-center">
+                                <a class="small" href="forgot-password.html">Olvidaste la Contraseña?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="/login">Ya tienes cuenta? Iniciar Sesion!</a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div className="mb-3">
-                        <label className="form-label">Correo electrónico</label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            value={correo}
-                            onChange={(e) => setCorreo(e.target.value)}
-                            required
-                        />
-                    </div>
-
-                    <div className="mb-3">
-                        <label className="form-label">Usuario</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            value={usuario}
-                            onChange={(e) => setUsuario(e.target.value)}
-                            required
-                        />
-                    </div>
-
-                    <div className="mb-3">
-                        <label className="form-label">Contraseña</label>
-                        <input
-                            type="password"
-                            className="form-control"
-                            value={clave}
-                            onChange={(e) => setClave(e.target.value)}
-                            required
-                        />
-                    </div>
-
-                    {error && <div className="alert alert-danger">{error}</div>}
-                    {exito && <div className="alert alert-success">{exito}</div>}
-
-                    <button type="submit" className="btn btn-primary w-100">
-                        Registrarse
-                    </button>
-                </form>
+                </div>
             </div>
+        </div>
+
+    </div>
         </>
     )
 }

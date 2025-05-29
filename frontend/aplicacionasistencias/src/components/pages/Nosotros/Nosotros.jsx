@@ -1,27 +1,52 @@
-import React from 'react'
+import React from 'react';
 import { Footer } from '../../common/Footer/Footer';
 
 export default function Nosotros() {
   return (
     <>
-      <div className="w3-row-padding" id="about">
-        <div className="w3-col l4 12">
-          <h3>🏫 Nosotros</h3>
-          <br />
-          <h6><strong> Descubre las Estadisticas sobre Asistencias y Medios de Transporte</strong><br />
-            Nuestra Institución Educativa está comprometida con la formación integral de sus estudiantes, promoviendo valores, conocimiento y responsabilidad. Como parte de nuestra evolución tecnológica, hemos desarrollado una aplicación moderna y eficiente que permite a los docentes registrar de manera rápida y precisa la asistencia diaria de los estudiantes, así como el medio de transporte que utilizan para llegar a la institución.
-
-            Esta herramienta no solo optimiza el control académico y administrativo, sino que también mejora la seguridad y el seguimiento de cada estudiante, brindando información útil para padres, docentes y directivos. Con esta iniciativa, reafirmamos nuestro compromiso con la innovación educativa y el bienestar de nuestra comunidad escolar.
-          </h6>
+      <section className="container py-5">
+        <div className="row align-items-center mb-5">
+          <div className="col-md-6">
+            <h2 className="fw-bold">NUESTRA HISTORIA</h2>
+            <p className="mt-3">
+              Nuestra historia comenzó con el propósito de transformar la educación mediante el uso de herramientas tecnológicas que permiten un mejor control y seguimiento del entorno escolar. Desde nuestros inicios, nos hemos enfocado en facilitar procesos para docentes y estudiantes.
+            </p>
+            <p>
+              Hoy, nuestra aplicación permite registrar asistencias, conocer medios de transporte y analizar datos socioeconómicos de los estudiantes, aportando a una educación más segura, inclusiva y eficaz.
+            </p>
+            <button className="btn btn-outline-dark mt-3">Descubre más</button>
+          </div>
+          <div className="col-md-6 text-center">
+            <img
+              src="https://img.freepik.com/foto-gratis/jovenes-amigos-parque_53876-46877.jpg"
+              alt="Nuestra historia"
+              className="img-fluid rounded"
+            />
+          </div>
         </div>
-        <div className="w3-col l8 12">
-          {/* <!-- Image of location/map --> */}
-          <img src="https://img.freepik.com/foto-gratis/jovenes-amigos-parque_53876-46877.jpg" className="w3-image w3-greyscale" style={{ "width": "100%" }} />
-        </div>
-      </div>
 
-       {/* Información */}
-      <section className="py-5 info-section">
+        <div className="row align-items-center">
+          <div className="col-md-6 text-center order-md-2">
+            <img
+              src="https://img.freepik.com/foto-gratis/amigos-universitarios-compartiendo-buenos-momentos_23-2149300627.jpg"
+              alt="Comunidad educativa"
+              className="img-fluid rounded"
+            />
+          </div>
+          <div className="col-md-6 order-md-1">
+            <h2 className="fw-bold">COMPROMISO CON LA COMUNIDAD</h2>
+            <p className="mt-3">
+              Nuestra institución trabaja con comunidades locales para entender las necesidades sociales de cada estudiante. Conocer el estrato socioeconómico y el transporte que usan los alumnos nos permite ofrecer soluciones más inclusivas.
+            </p>
+            <p>
+              A través del análisis de datos obtenidos por nuestra app, generamos políticas que mejoran la calidad educativa, fomentan la equidad y fortalecen la conexión con padres y cuidadores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección Misión, Visión, Valores */}
+      <section className="py-5 bg-light">
         <div className="container">
           <div className="row text-center">
             <div className="col-md-4 mb-4">
@@ -51,5 +76,5 @@ export default function Nosotros() {
 
       <Footer />
     </>
-  )
+  );
 }

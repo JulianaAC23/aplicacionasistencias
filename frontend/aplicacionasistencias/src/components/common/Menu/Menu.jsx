@@ -12,7 +12,7 @@ export function Menu() {
               alt=""
               style={{ width: "13%", borderRadius: "50%", marginRight: "2%" }}
             />
-            Institución Educativa
+            Gestión Educativa
           </Link>
           <button
             className="navbar-toggler"
