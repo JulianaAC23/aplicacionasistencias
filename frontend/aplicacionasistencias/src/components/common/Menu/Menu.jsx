@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
-import { Login } from "../../pages/Login/Login";
+import { useAuth } from "../../../context/AuthProvider";
+
 export function Menu() {
+  let { user, logout } = useAuth();
+
+  console.log("info user", user);
+
+  // Puedes definir una imagen por defecto si el usuario no tiene una
+  const defaultProfileImage = "https://via.placeholder.com/40";
+
   return (
     <div>
       {/*<!-- Navbar -->*/}
@@ -26,7 +34,7 @@ export function Menu() {
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link className="nav-link active" to="/login">
-                  Iniciar sesion
+                  Iniciar sesión
                 </Link>
               </li>
               <li className="nav-item">
@@ -39,11 +47,40 @@ export function Menu() {
                   Nosotros
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="">
-                  🔍
-                </Link>
-              </li>
+
+              {/* Mostrar imagen de perfil si hay usuario */}
+              {user ? (
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle d-flex align-items-center"
+                    href="#"
+                    id="perfilDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src={user.fotoPerfil || defaultProfileImage}
+                      alt="Perfil"
+                      className="rounded-circle"
+                      style={{ width: "40px", height: "40px", objectFit: "cover" }}
+                    />
+                  </a>
+                  <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
+                    <li>
+                      <button className="dropdown-item" onClick={logout}>
+                        Cerrar sesión
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              ) : (
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">
+                    
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>
@@ -51,3 +88,4 @@ export function Menu() {
     </div>
   );
 }
+

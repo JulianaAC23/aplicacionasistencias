@@ -1,28 +1,23 @@
 import { useAuth } from "../../../context/AuthProvider";
+import Figure_1 from "../../../assets/img/Figure_1.png";
+import Figure_2 from "../../../assets/img/Figure_2.png";
+import Figure_3 from "../../../assets/img/Figure_3.png";
 
 export function Dashboard() {
   let { user } = useAuth();
+
   return (
     <div className="wrapper">
       {/* Navbar */}
       <nav className="main-header navbar navbar-expand navbar-white navbar-light">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" data-widget="pushmenu" href="#">
-              <i className="fas fa-bars"></i>
-            </a>
-          </li>
-          <li className="nav-item d-none d-sm-inline-block">
-            <a href="/" className="nav-link">Inicio</a>
           </li>
         </ul>
       </nav>
 
       {/* Sidebar */}
-      <aside className="main-sidebar sidebar-dark-primary elevation-4">
-        <a href="/admin/dashboard" className="brand-link">
-          <span className="brand-text font-weight-light">Panel Administrativo</span>
-        </a>
+      <aside className="main-sidebar bg-danger elevation-4">
         <div className="sidebar">
           <nav className="mt-2">
             <ul className="nav nav-pills nav-sidebar flex-column">
@@ -32,63 +27,114 @@ export function Dashboard() {
                   <p>Dashboard</p>
                 </a>
               </li>
-              {/* Aquí puedes agregar más enlaces */}
             </ul>
           </nav>
         </div>
       </aside>
 
+
       {/* Contenido principal */}
       <div className="content-wrapper p-4">
         <div className="content-header">
           <div className="container-fluid">
-            <h1 className="m-0">Bienvenido al Dashboard {user.username} </h1>
+            <h1 className="m-0">Bienvenido al Dashboard {user.username}</h1>
           </div>
         </div>
 
-        {/* Cards */}
+        {/* Tarjetas resumen */}
         <section className="content">
           <div className="container-fluid">
-            <div className="row">
-              <div className="col-lg-4 col-6">
-                <div className="small-box bg-info">
-                  <div className="inner">
-                    <h3>Registros por Estado</h3>
-                    <img src="/assets/img/Figure_1.png" alt="Gráfico 1" className="img-fluid" />
-                  </div>
-                  <div className="icon">
-                    <i className="fas fa-user-graduate"></i>
+            <div className="row text-center mb-4">
+              <div className="col-md-3">
+                <div className="card bg-primary text-white">
+                  <div className="card-body">
+                    <h3>25</h3>
+                    <p>Estudiantes</p>
                   </div>
                 </div>
               </div>
-
-              <div className="col-lg-4 col-6">
-                <div className="small-box bg-success">
-                  <div className="inner">
-                    <h3>Medio de Transporte</h3>
-                    <img src="/assets/img/Figure_2.png" alt="Gráfico 2" className="img-fluid" />
-                  </div>
-                  <div className="icon">
-                    <i className="fas fa-check-circle"></i>
+              <div className="col-md-3">
+                <div className="card bg-warning text-white">
+                  <div className="card-body">
+                    <h3>21</h3>
+                    <p>Presentes</p>
                   </div>
                 </div>
               </div>
-
-              <div className="col-lg-4 col-6">
-                <div className="small-box bg-warning">
-                  <div className="inner">
-                    <h3>Estado / medio de transporte</h3>
-                    <img src="/assets/img/Figure_3.png" alt="Gráfico 3" className="img-fluid" />
+              <div className="col-md-3">
+                <div className="card bg-success text-white">
+                  <div className="card-body">
+                    <h3>4</h3>
+                    <p>Ausentes</p>
                   </div>
-                  <div className="icon">
-                    <i className="fas fa-bus-alt"></i>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="card bg-info text-white">
+                  <div className="card-body">
+                    <h3>21</h3>
+                    <p>Llegadas Tarde</p>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Gráficos inferiores */}
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card h-100">
+                  <div className="card-header text-center">
+                    <strong>Estado - Últimos 7 días</strong>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <img
+                      src={Figure_1}
+                      alt="grafico1"
+                      className="img-fluid d-block mx-auto"
+                      style={{ maxHeight: "250px", objectFit: "contain" }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-4">
+                <div className="card h-100">
+                  <div className="card-header text-center">
+                    <strong>Medio de Transporte</strong>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <img
+                      src={Figure_2}
+                      alt="grafico2"
+                      className="img-fluid d-block mx-auto"
+                      style={{ maxHeight: "250px", objectFit: "contain" }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-4">
+                <div className="card h-100">
+                  <div className="card-header text-center">
+                    <strong>Estado / Transporte</strong>
+                  </div>
+                  <div className="card-body d-flex justify-content-center align-items-center">
+                    <img
+                      src={Figure_3}
+                      alt="grafico3"
+                      className="img-fluid d-block mx-auto"
+                      style={{ maxHeight: "250px", objectFit: "contain" }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </section>
       </div>
     </div>
   );
 }
+
