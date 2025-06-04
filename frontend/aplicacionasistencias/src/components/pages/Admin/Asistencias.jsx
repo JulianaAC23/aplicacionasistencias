@@ -1,147 +1,130 @@
 import { useAuth } from "../../../context/AuthProvider";
+import { useState } from "react";
 
 export default function Asistencias() {
-   let { user } = useAuth();
+  const { user } = useAuth();
+
+  // Lista de estudiantes simulada
+  const estudiantes = [
+    { id: 1, nombre: "Juan Pérez", identificacion: "123456" },
+    { id: 2, nombre: "María López", identificacion: "234567" },
+    { id: 3, nombre: "Carlos Gómez", identificacion: "345678" }
+  ];
+
+  // Estado para guardar selecciones
+  const [asistencias, setAsistencias] = useState({});
+
+  const handleChange = (id, field, value) => {
+    setAsistencias((prev) => ({
+      ...prev,
+      [id]: {
+        ...prev[id],
+        [field]: value
+      }
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Asistencias registradas:", asistencias);
+    alert("Asistencias registradas exitosamente");
+    // Aquí puedes hacer POST a tu backend
+  };
+
   return (
     <div className="container py-5">
-      <div className="row justify-content-center">
-        <div className="col-md-8">
-          <div className="card shadow rounded">
-            <div className="card-body">
-              <h3 className="card-title text-center mb-4 fw-bold">Registro de Asistencia</h3>
-              <br />
-              <h4 className="card-title">Profesor {user.username} </h4>
-              <br /><br />
-              <form>
-                <div className="row mb-3">
-                  <div className="col-md-6">
-                    <label htmlFor="nombre" className="form-label">Nombre</label>
-                    <input type="text" className="form-control" id="nombre" placeholder="Ingrese el nombre" />
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="apellido" className="form-label">Apellido</label>
-                    <input type="text" className="form-control" id="apellido" placeholder="Ingrese el apellido" />
-                  </div>
-                </div>
-                <br /><br />
+      <div className="bg-white shadow p-4 rounded-4 border border-light">
+        <div className="text-center mb-4">
+          <h2 className="fw-bold text-dark">Registro de Asistencia</h2>
+          <hr className="border-3 rounded-pill border-danger" />
+        </div>
 
-                <div className="row mb-3">
-                  <div className="col-md-6">
-                    <label htmlFor="grupo" className="form-label">Grupo</label>
-                    <input type="text" className="form-control" id="grupo" placeholder="Ej: 3°B" />
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="id" className="form-label">ID</label>
-                    <input type="text" className="form-control" id="id" placeholder="Número de identificación" />
-                  </div>
-                </div>
-                <br /><br />
-
-                <div className="row mb-3">
-                  <div className="col-md-6">
-                    <label htmlFor="fecha" className="form-label">Fecha</label>
-                    <input type="date" className="form-control" id="fecha" placeholder="Número de identificación" />
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="periodo" className="form-label">Periodo Academico</label>
-                    <select className="form-select" id="periodo" name="periodo">
-                      <option value="">Seleccione un periodo:</option>
-                      <option value="2025-1">1</option>
-                      <option value="2025-2">2</option>
-                      <option value="2025-3">3</option>
-                      <option value="2025-4">4</option>
-                    </select>
-                  </div>
-                </div>
-                <br /><br />
-                <hr />
-                
-                <div className="mb-4">
-                  <label className="form-label d-block">Asistencia</label>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="asistencia" id="asistio" value="asistio" defaultChecked />
-                    <label className="form-check-label" htmlFor="asistio">Asistió</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="asistencia" id="inasistencia" value="inasistencia" />
-                    <label className="form-check-label" htmlFor="inasistencia">Inasistencia</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="asistencia" id="justificado" value="justificado" />
-                    <label className="form-check-label" htmlFor="justificado">Justificado</label>
-                  </div>
-                </div>
-                <br /><br />
-                 <hr />
-
-                <div className="mb-4">
-                  <label className="form-label d-block">Medio transporte</label>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="transporte" id="moto" value="moto" defaultChecked />
-                    <label className="form-check-label" htmlFor="moto">Moto</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="transporte" id="bus" value="bus" />
-                    <label className="form-check-label" htmlFor="bus">Bus</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="transporte" id="metro" value="metro" />
-                    <label className="form-check-label" htmlFor="metro">Metro</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="transporte" id="pie" value="pie" />
-                    <label className="form-check-label" htmlFor="pie">A Pie</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="transporte" id="bicicleta" value="bicicleta" />
-                    <label className="form-check-label" htmlFor="bicicleta">Bicicleta</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="transporte" id="carro" value="carro" />
-                    <label className="form-check-label" htmlFor="carro">Carro</label>
-                  </div>
-                </div>
-                <br /><br />
-                <hr />
-
-                <div className="mb-4">
-                  <label className="form-label d-block">Estrato</label>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="estrato" id="1" value="1" defaultChecked />
-                    <label className="form-check-label" htmlFor="1">1</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="estrato" id="2" value="2" />
-                    <label className="form-check-label" htmlFor="2">2</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="estrato" id="3" value="3" />
-                    <label className="form-check-label" htmlFor="3">3</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="estrato" id="4" value="4" />
-                    <label className="form-check-label" htmlFor="4">4</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="estrato" id="5" value="5" />
-                    <label className="form-check-label" htmlFor="5">5</label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="estrato" id="6" value="6" />
-                    <label className="form-check-label" htmlFor="6">6</label>
-                  </div>
-                </div>
-                <br /><br />
-                <hr />
-
-                <div className="d-grid">
-                  <button type="submit" className="btn btn-danger btn-lg">Registrar Asistencia</button>
-                </div>
-              </form>
-            </div>
+        <div className="d-flex justify-content-between mb-3">
+          <p><strong>Docente:</strong> {user.username}</p>
+          <div>
+            <p><strong>Grupo:</strong> __________</p>
+            <p><strong>Horario:</strong> __________</p>
           </div>
         </div>
+
+        <form onSubmit={handleSubmit}>
+          <div className="table-responsive">
+            <table className="table table-bordered align-middle">
+              <thead className="table-secondary text-center">
+                <tr>
+                  <th>Nombre</th>
+                  <th>Identificación</th>
+                  <th>Asistencia</th>
+                  <th>Medio de Transporte</th>
+                  <th>Estrato</th>
+                </tr>
+              </thead>
+              <tbody>
+                {estudiantes.map((estudiante) => (
+                  <tr key={estudiante.id}>
+                    <td>{estudiante.nombre}</td>
+                    <td>{estudiante.identificacion}</td>
+                        <td className="text-center">
+                        <select
+                          className="form-select"
+                          value={asistencias[estudiante.id]?.asistencia || ""}
+                          onChange={(e) => handleChange(estudiante.id, "asistencia", e.target.value)}
+                        >
+                          <option value="">Seleccione</option>
+                          <option value="asistio">Asistió</option>
+                          <option value="inasistencia">Inasistencia</option>
+                          <option value="justificado">Justificado</option>
+                        </select>
+                      </td>
+
+
+                    <td className="text-center">
+                      {["moto", "bus", "metro", "pie", "bicicleta", "carro"].map((medio) => (
+                        <div className="form-check form-check-inline gap-2" key={medio}>
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name={`transporte-${estudiante.id}`}
+                            value={medio}
+                            checked={asistencias[estudiante.id]?.transporte === medio}
+                            onChange={() => handleChange(estudiante.id, "transporte", medio)}
+                          />
+                          <label className="form-check-label">
+                            {medio}
+                          </label>
+                        </div>
+                      ))}
+                    </td>
+                    <td className="text-center">
+                      {[1, 2, 3, 4, 5, 6].map((nivel) => (
+                        <div className="form-check form-check-inline" key={nivel}>
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name={`estrato-${estudiante.id}`}
+                            value={nivel}
+                            checked={asistencias[estudiante.id]?.estrato === String(nivel)}
+                            onChange={() => handleChange(estudiante.id, "estrato", String(nivel))}
+                          />
+                          <label className="form-check-label">{nivel}</label>
+                        </div>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="text-center mt-4">
+            <button type="submit" className="btn btn-lg btn-danger px-5 fw-bold">
+              Registrar Asistencias
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
+
+

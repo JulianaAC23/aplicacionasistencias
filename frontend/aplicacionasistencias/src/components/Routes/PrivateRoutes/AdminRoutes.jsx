@@ -1,10 +1,19 @@
 import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../../../context/AuthProvider";
 import LoadingSpinner from "../../common/Loading/loadingSpinner";
+import { useState, useEffect } from "react";
  
 export default function AdminRoutes(){
     let { user, loading } = useAuth(); //variable del usuario logeado
-    if (loading){
+    let [spinner, setSpinner] = useState(true);
+
+    useEffect(()=>{
+        let time = setTimeout(()=>{
+            setSpinner(false);
+        }, 1000);
+        return ()=> clearTimeout(time);
+    },[])
+    if (loading || spinner ){
         return <LoadingSpinner />
     }
 

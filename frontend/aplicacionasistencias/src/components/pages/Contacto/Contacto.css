@@ -11,7 +11,7 @@
 }
 
 .contact-form h2 {
-  color: #e91e63; /* color rosado */
+  color: #b22222; /* color rosado */
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -73,9 +73,9 @@
 }
 
 .btn-submit {
-  border: 1px solid #e91e63;
+  border: 1px solid #b22222;
   background: none;
-  color: #e91e63;
+  color: #b22222;
   padding: 12px 25px;
   font-weight: 700;
   border-radius: 3px;
@@ -84,7 +84,7 @@
 }
 
 .btn-submit:hover {
-  background: #e91e63;
+  background: #b22222;
   color: white;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .contact-info h3 {
-  background: #e91e63;
+  background: #b22222;
   color: white;
   text-align: center;
   padding: 15px 0;
@@ -105,7 +105,7 @@
 }
 
 .sede h4 {
-  color: #e91e63;
+  color: #b22222;
   font-weight: 700;
   margin-bottom: 5px;
 }

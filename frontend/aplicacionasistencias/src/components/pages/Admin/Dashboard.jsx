@@ -1,6 +1,5 @@
 import { useAuth } from "../../../context/AuthProvider";
 
-
 export function Dashboard() {
   let { user } = useAuth();
   return (
@@ -55,7 +54,7 @@ export function Dashboard() {
                 <div className="small-box bg-info">
                   <div className="inner">
                     <h3>Registros por Estado</h3>
-                    <img src="../../../assets/img/Figure_1.png" alt="" />
+                    <img src="/assets/img/Figure_1.png" alt="Gráfico 1" className="img-fluid" />
                   </div>
                   <div className="icon">
                     <i className="fas fa-user-graduate"></i>
@@ -67,7 +66,7 @@ export function Dashboard() {
                 <div className="small-box bg-success">
                   <div className="inner">
                     <h3>Medio de Transporte</h3>
-                    <img src="../../../assets/img/Figure_2.png" alt="" />
+                    <img src="/assets/img/Figure_2.png" alt="Gráfico 2" className="img-fluid" />
                   </div>
                   <div className="icon">
                     <i className="fas fa-check-circle"></i>
@@ -79,7 +78,7 @@ export function Dashboard() {
                 <div className="small-box bg-warning">
                   <div className="inner">
                     <h3>Estado / medio de transporte</h3>
-                    <img src="../../../assets/img/Figure_3.png" alt="" />
+                    <img src="/assets/img/Figure_3.png" alt="Gráfico 3" className="img-fluid" />
                   </div>
                   <div className="icon">
                     <i className="fas fa-bus-alt"></i>

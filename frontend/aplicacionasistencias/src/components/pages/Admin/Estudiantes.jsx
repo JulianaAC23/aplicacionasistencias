@@ -6,23 +6,23 @@ export default function Estudiantes() {
         <>
             <style>{`
                 .bg-fucsia {
-                    background-color: #e91e63;
+                    background-color: #b22222;
                     color: white;
                 }
                 .text-fucsia {
-                    color: #e91e63;
+                    color: #b22222;
                 }
                 .table-fucsia thead {
-                    background-color: #e91e63;
+                    background-color: #b22222;
                     color: white;
                 }
                 .btn-fucsia {
-                    background-color: #e91e63;
+                    background-color: #b22222;
                     color: white;
                     border: none;
                 }
                 .btn-fucsia:hover {
-                    background-color: #c2185b;
+                    background-color: #b22222;
                 }
             `}</style>
 

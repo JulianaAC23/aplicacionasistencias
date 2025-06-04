@@ -10,6 +10,7 @@ export function Home() {
         <div className="container">
           <h1 className="display-4 fw-bold">
             Bienvenidos a Nuestra App de Gestión Educativa
+            <img src="../../../assets/img/logo1.png" alt="" />
           </h1>
           <p className="lead">
             Formando estudiantes con valores, conocimiento y futuro.

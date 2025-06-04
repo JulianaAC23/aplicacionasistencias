@@ -8,9 +8,9 @@ export function Menu() {
         <div className="container">
           <Link className="navbar-brand" to="/home" style={{ margin: "0px" }}>
             <img
-              src="../../../../src/assets/img/Logo.png"
+              src="../../../../src/assets/img/logo1-removebg-preview.png"
               alt=""
-              style={{ width: "13%", borderRadius: "50%", marginRight: "2%" }}
+              style={{ width: "16%", borderRadius: "50%", marginRight: "2%" }}
             />
             Gestión Educativa
           </Link>

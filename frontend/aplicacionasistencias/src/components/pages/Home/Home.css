@@ -13,7 +13,7 @@
 
 /* Botón principal estilo fucsia */
 .btn-fucsia {
-  background-color: #e91e63;
+  background-color: #b22222;
   border: none;
   color: white;
   padding: 0.75rem 1.5rem;
@@ -23,12 +23,12 @@
 }
 
 .btn-fucsia:hover {
-  background-color: #d81b60;
+  background-color: #424141;
 }
 
 /* Secciones de misión/visión/valores */
 .info-section h4 {
-  color: #e91e63;
+  color: #b22222;
   font-weight: 600;
 }
 
@@ -38,7 +38,7 @@
 
 /* Llamado a la acción */
 .cta-section {
-  background-color: #e91e63;
+  background-color: #b22222;
   color: white;
   text-align: center;
   padding: 4rem 2rem;
