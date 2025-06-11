@@ -78,7 +78,7 @@ export function Login() {
                                         <a className="small" href="forgot-password.html">¿Olvidaste la contraseña?</a>
                                     </div>
                                     <div className="text-center">
-                                        <a className="small" href="/registro">Crear cuenta</a>
+                                        <Link className="small" to="/registro">Crear cuenta</Link>
                                     </div>
                                 </div>
                             </div>

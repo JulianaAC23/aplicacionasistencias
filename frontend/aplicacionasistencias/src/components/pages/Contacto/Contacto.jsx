@@ -29,9 +29,9 @@ export default function Contacto() {
           </select>
 
           <select required>
-            <option value="" disabled selected>Seleccione programa</option>
-            <option value="programa1">Programa 1</option>
-            <option value="programa2">Programa 2</option>
+            <option value="" disabled selected>Seleccione Grupo</option>
+            <option value="programa1">1</option>
+            <option value="programa2">2</option>
             {/* más opciones */}
           </select>
 

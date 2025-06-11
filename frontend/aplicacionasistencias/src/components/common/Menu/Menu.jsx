@@ -16,7 +16,7 @@ export function Menu() {
         <div className="container">
           <Link className="navbar-brand" to="/home" style={{ margin: "0px" }}>
             <img
-              src="../../../../src/assets/img/logo1-removebg-preview.png"
+              src="/img/logo1-removebg-preview.png"
               alt=""
               style={{ width: "16%", borderRadius: "50%", marginRight: "2%" }}
             />

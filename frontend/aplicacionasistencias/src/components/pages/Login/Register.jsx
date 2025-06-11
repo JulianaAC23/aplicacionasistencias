@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 export default function Register() {
@@ -60,7 +61,7 @@ export default function Register() {
                                 <a class="small" href="forgot-password.html">Olvidaste la Contraseña?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="/login">Ya tienes cuenta? Iniciar Sesion!</a>
+                                <Link class="small" to="/login">Ya tienes cuenta? Iniciar Sesion!</Link>
                             </div>
                         </div>
                     </div>
