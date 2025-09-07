@@ -1,0 +1,39 @@
+{
+    "users":[
+        {
+            "id":1,
+            "username": "Juliana Alarcon",
+            "email": "jalarcon@gmail.com",
+            "password": "jalarcon321",
+            "rol": "admin",
+            "fotoPerfil": "https://fudeat.com/img/user/default_avatar.png"
+        },
+        {
+            "id":2,
+            "username": "Jancarlos Jave",
+            "email": "jjave@gmail.com",
+            "password": "jjave321",
+            "rol": "admin",
+            "fotoPerfil": "https://fudeat.com/img/user/default_avatar.png"
+        },
+        {
+            "id":3,
+            "username": "Kevin Murillo",
+            "email": "kmurillo@gmail.com",
+            "password": "kmurillo321",
+            "rol": "profesor",
+            "fotoPerfil": "https://fudeat.com/img/user/default_avatar.png"
+        },
+        {
+            "id":4,
+            "username": "Carlos Garcia",
+            "email": "cgarcia@gmail.com",
+            "password": "cgarcia321",
+            "grupo": "8A",
+            "rol": "estudiante",
+            "fotoPerfil": "https://fudeat.com/img/user/default_avatar.png"
+        }
+
+    ]
+    
+}
